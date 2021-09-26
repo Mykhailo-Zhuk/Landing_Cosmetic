@@ -6,17 +6,26 @@ body, html {
 }
 
 .wrapper {
-  width: 1920px;
+  max-width: 1740px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container {
-  max-width: 1295px;
+  width: 1295px;
   margin: 0 auto;
 }
 
 .top-line {
   background-color: color_1;
-  height: 90px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 90px;
+          flex: 0 1 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,7 +120,7 @@ body, html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #000000;
+  background-color: #00868A;
   width: 270px;
   height: 40px;
   color: #FFFFFF;
@@ -153,9 +162,11 @@ body, html {
 
 .first-screen {
   background-color: #4FBFA5;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 700px;
+          flex: 0 1 700px;
 }
-
-.first-screen__menu {
+.first-screen .first-screen__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,27 +180,24 @@ body, html {
       -ms-flex-align: center;
           align-items: center;
 }
-
-.navigation__panel_list {
+.first-screen .navigation__panel_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.navigation__panel_list li {
+.first-screen .navigation__panel_list li {
   list-style: none;
   margin: 15px 5px 15px 30px;
 }
-.navigation__panel_list li a {
+.first-screen .navigation__panel_list li a {
   text-decoration: none;
 }
-
-.navigation__panel_link {
+.first-screen .navigation__panel_link {
   color: #FFFFFF;
   font-size: 18px;
   line-height: 150%;
 }
-
-.navigation__panel_button {
+.first-screen .navigation__panel_button {
   position: relative;
   top: 0px;
   right: 10px;
@@ -200,11 +208,91 @@ body, html {
   padding: 10px 10px;
   cursor: pointer;
 }
-
-.navigation__panel_button-link {
+.first-screen .navigation__panel_button-link {
   color: #000000;
   text-decoration: none;
   font-size: 18px;
   line-height: 21px;
   margin: auto;
+}
+.first-screen .first-screen__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.first-screen .first-screen__discription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  top: 163px;
+  left: 0px;
+  max-width: 416px;
+}
+.first-screen .first-screen__discription .discription__body {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 266px;
+          flex: 0 1 266px;
+  color: #FFFFFF;
+}
+.first-screen .first-screen__discription .discription__header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  font-size: 24px;
+  line-height: 150%;
+}
+.first-screen .first-screen__discription .discription__text {
+  font-size: 14px;
+  line-height: 150%;
+}
+.first-screen .first-screen__discription .discription__button {
+  background-color: #00868A;
+  position: absolute;
+  left: 0;
+  top: 218px;
+  max-height: 50px;
+  width: 163px;
+  cursor: pointer;
+  text-align: center;
+  padding: 15px 25px;
+}
+.first-screen .first-screen__discription .discription__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.first-screen .first-screen__discription .first-screen__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 925px;
+          flex: 0 1 925px;
+  max-height: 533px;
+  text-decoration: none;
+}
+.first-screen .first-screen__discription .first-screen__slider .slider__button-left {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
