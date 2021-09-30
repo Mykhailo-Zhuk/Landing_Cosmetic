@@ -271,6 +271,7 @@ body, html {
   color: #FFFFFF;
 }
 .first-screen .first-screen__discription .first-screen__slider {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,21 +279,27 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 925px;
-          flex: 0 1 925px;
   max-height: 533px;
   text-decoration: none;
 }
-.first-screen .first-screen__discription .first-screen__slider .slider__button-left {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
+.first-screen .slider__button {
+  position: absolute;
+  top: 668px;
+  left: 359px;
+}
+.first-screen .slider__button-left, .first-screen .slider__button-right {
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+  background-color: #4FBFA5;
+  padding: 25px 15px 25px 15px;
+  height: 50px;
+  width: 60px;
+  border: 1px solid #FFFFFF;
+}
+.first-screen .slider__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.first-screen .slider__image img {
+  max-height: 533px;
+  max-width: 746px;
 }

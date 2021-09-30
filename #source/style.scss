@@ -214,46 +214,36 @@ body, html {
             color: $color_1;
         }
         .first-screen__slider {
+            position: relative;
             display: flex;
             flex-direction: row;
-            flex: 0 1 925px;
             max-height: 533px;
             text-decoration: none;
-            .slider__button-left {
-                background-color: #4CAF50;
-                border: none;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-                // text-decoration: none;
-                // // margin: 4px 2px;
-                // cursor: pointer;
-                // // padding: 15px 32px;
-                // width: 60px;
-                // height: 50px;
-                // background-color: $color_3;
-                // border: 1px solid $color_1;
-                // span {
-                //     content: "";
-                //     position: absolute;
-                //     top: 0;
-                //     left: 0;
-                //     width: 10px;
-                //     height: 1px;
-                //     background-color: $color_1;  
-                // }
-            }
-            
         }
-        
+    }
+    .slider__button {
+        position: absolute;
+        top: 668px;
+        left: 359px;
 
     }
+    .slider__button-left, .slider__button-right {
+        display: inline-block;
+        background-color: $color_3;
+        padding: 25px 15px 25px 15px;
+        height: 50px;
+        width: 60px;
+        border: 1px solid $color_1;
+    }
+    .slider__image {
+        object-fit: cover;
+    }
+    .slider__image img {
+        max-height: 533px;
+        max-width: 746px;
+    }
 }
+
 
 // 
 // .first-screen__footer {
