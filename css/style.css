@@ -318,7 +318,6 @@ body, html {
   border: 1px solid #FFFFFF;
 }
 .first-screen .first-screen__footer {
-  bottom: 0;
   max-height: 80px;
   text-align: center;
   -webkit-box-pack: center;
