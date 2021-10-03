@@ -24,7 +24,7 @@ body, html {
     flex-direction: column;
 }
 .container {
-    width: 1295px;
+    max-width: 1295px;
     margin: 0 auto;
 }
 .top-line {
@@ -131,9 +131,10 @@ body, html {
     
 }
 .first-screen {
+    display: flex;
+    flex-direction: column;
     background-color: $color_3;
     flex: 0 1 700px;
-
     .first-screen__menu {
         display: flex;
         flex: 0 1 87px;
@@ -174,7 +175,9 @@ body, html {
         margin: auto;
     }
     .first-screen__body {
+        position: relative;
         display: flex;
+        flex: 0 1 auto;
         justify-content: space-between;
     }
     .first-screen__discription {
@@ -212,47 +215,63 @@ body, html {
             text-decoration: none;
             text-transform: uppercase;
             color: $color_1;
-        }
-        .first-screen__slider {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            max-height: 533px;
-            text-decoration: none;
-        }
+        }   
     }
-    .slider__button {
-        position: absolute;
-        top: 668px;
-        left: 359px;
-
-    }
-    .slider__button-left, .slider__button-right {
-        display: inline-block;
-        background-color: $color_3;
-        padding: 25px 15px 25px 15px;
-        height: 50px;
-        width: 60px;
-        border: 1px solid $color_1;
-    }
-    .slider__image {
-        object-fit: cover;
-    }
-    .slider__image img {
+    .first-screen__slider {
+        position: relative;
+        display: flex;
+        flex-direction: row;
         max-height: 533px;
-        max-width: 746px;
+        text-decoration: none;
+        .first-screen__slider_image {
+            max-width: 746px;
+            max-height: 533px;
+            overflow: hidden;
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .slider__button {
+            position: absolute;
+            bottom: 40px;
+            left: -145px;
+        }
+        .slider__button-left, .slider__button-right {
+            display: inline-block;
+            background-color: $color_3;
+            padding: 25px 25px;
+            max-height: 50px;
+            max-width: 60px;
+            border: 1px solid $color_1;
     }
+    }
+    .first-screen__footer {
+        bottom: 0;
+        max-height: 80px;
+        text-align: center;
+        justify-content: center;
+        color: $color_1;
+        .footer__panel {
+            display: flex;
+            height: 100%; 
+        }
+        .footer__text-complex {
+            padding: 14px 0px;
+            background-color: $color_4;
+            flex: 0 1 648px;     
+        }
+        .footer__text-center {
+            flex: 0 1 324px;
+            padding: 14px 0px;
+        }
+        .footer__text-vip-clients {
+            background-color: $color_4;
+            flex: 0 1 324px;
+            padding: 14px 0px; 
+        }
+    
+    }
+
 }
-
-
-// 
-// .first-screen__footer {
-// }
-// .footer__panel {
-// }
-// .footer__text-complex {
-// }
-// .footer__text-center {
-// }
-// .footer__text-vip-clients {
-// }
