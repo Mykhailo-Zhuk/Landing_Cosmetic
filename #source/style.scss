@@ -30,40 +30,58 @@ body, html {
 }
 .top-line {
     background-color: color_1;
-    flex: 0 1 90px;
     display: flex;
     justify-content: center;
     .top-line__body {
         display: flex;
+        width: 100%;
         @include topBorder;
         height: 90px;
-        box-sizing: border-box;
-
-        .top-line__logo {   
-            flex: 0 1 260px;
-            text-align: center;  
-            padding: 5px 27px;
-            img {
-            object-fit: contain;
-            flex: 0 1 260px;    
+        
+        .top-line__body_list {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex: 1 1 auto;
+            flex-direction: row;
+            height: 100%;
+            li {
+                list-style: none;
             }
-        }   
+            .top-line__items {
+                align-items: center;
+                justify-content: center;
+                flex: 1 1 33.3333%;
+            }
+            .top-line__items_logo {   
+                max-width: auto;
+                text-align: center;  
+                padding: 0 5px;
+                img {
+                    min-width: 40px;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: none;
+                }
+            } 
+        }
         .top-line__number {
             @include topBorder; 
-            flex: 0 0 185px;
-            font-size: 16px;
+            flex: 0 1 150px;
+            font-size: 14px;
             line-height: 19px;
             text-align: center;
-            padding: 25px 0;                
+            margin: 0 auto;
+            // padding: 18px 10px 5px 10px;                
         }
         .top-line__saloons {
             text-align: left;
             justify-content: center;
             @include topBorder;
-            flex: 0 0 199px;
+            flex: 0 0 180px;
             position: relative;
-            padding: 25px 0;
-            font-size: 16px;
+            padding: 18px 0px;
+            font-size: 14px;
             line-height: 18.83px;
             .top-line__saloons_text {
                 padding-left: 25px;
@@ -71,8 +89,8 @@ body, html {
             &:after {
                 content: "";
                 position: absolute;
-                top: 40px;
-                right: 20px;
+                top: 33px;
+                right: 25px;
                 background-color: $color_3;
                 height: 20px;
                 width: 20px;
@@ -81,14 +99,14 @@ body, html {
             }
             .top-line__saloons_image {
                 position: absolute;
-                top: 40px;
-                right: 26px;
+                top: 34px;
+                right: 31px;
                 z-index: 2;
             }
         }
         .top-line__button {
             @include topBorder;
-            flex: 0 0 331px;
+            flex: 0 1 331px;
             align-items: center;
         
             .top-line__button_item {
@@ -99,7 +117,7 @@ body, html {
                 width: 270px;
                 height: 40px;
                 color: $color_1;
-                margin: 29px auto 23px auto;
+                margin: 27px 15px 20px 15px;
                 p {
                     margin: 12px 20px 12px 0;
                     line-height: 16.48px;
@@ -111,23 +129,28 @@ body, html {
                 }
             }
         }
-        .top-line__social-icon {
+        .top-line__social_list {
+            margin: 0;
+            padding: 0;
             display: flex;
-            flex: 0 0 320px;
-            flex-wrap: nowrap;
-            height: 90px;
-            align-items: stretch;
-            .social-icon__item {
-                width: 80px;
-                @include topBorder;
-                &:last-child {
-                    border-right: 1px solid $color_2;
-                }
-                img {
-                    margin: 35px 30px;
-                }
+            flex: 0 1 100px;
+            flex-direction: row;
+            height: 100%;
+            li {
+                list-style: none;
             }
         }
+        .social-icon__item {
+            max-width: 80px;
+            @include topBorder;
+            &:last-child {
+                border-right: 1px solid $color_2;
+            }
+            img {
+                margin: 35px 30px;
+            }
+        }
+        
     }
     
 }
@@ -154,7 +177,7 @@ body, html {
     }
     .navigation__panel_link {
         color: $color_1;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 150%;
     }
     .navigation__panel_button {
@@ -171,7 +194,7 @@ body, html {
     .navigation__panel_button-link {
         color: $color_5;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 21px;
         margin: auto;
     }
