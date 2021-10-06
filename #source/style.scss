@@ -367,7 +367,7 @@ body, html {
         max-height: 580px;
         background-color: $color_4;
         color: $color_1;
-        .innovation__topLine {
+        .innovation__topLine_left {
             background-color: $color_3;
             max-height: 40px;
             max-width: 125px;
@@ -376,7 +376,7 @@ body, html {
             a {
                 text-decoration: none;
             }
-            .topLine__button {
+            .topLine__button_left {
                 font-size: 16px;
                 padding: 0px 15px;
                 color: $color_1;
@@ -452,23 +452,87 @@ body, html {
     }
     .innovation__items_right {
         flex: 0 1 636px;
+        position: relative;
+        .innovation__topLine_right {
+            background-color: $color_3;
+            max-height: 40px;
+            max-width: 186px;
+            margin: 30px 0 0 0px;
+            padding: 11px 0;
+            a {
+                text-decoration: none;
+            }
+            .topLine__button_right {
+                font-size: 16px;
+                padding: 0px 15px;
+                color: $color_1;
+            }
+        }
+        .innovation__declaration {
 
+            .declaration__list {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+                position: relative;
+                z-index: 3;
+                li {
+                    list-style: none;
+                }
+                .declaration__list_item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    margin-top: 35px;
+                }
+                .declaration__list_number {
+                    max-height: 72px;
+                    max-width: 50px;
+                    font-size: 48px;
+                    line-height: 72px;
+                    color: $color_5;
+                    opacity: 0.3;
+                }
+                .declaration__list_number_large {
+                    font-size: 96px;
+                    color: $color_4;
+                    max-height: 144px;
+                    max-width: 111px;
+                    opacity: 1;
+                }
+                .declaration__list_item_text {
+                    padding-left: 20px;
+                    max-width: 164px;
+                    max-height: 42px;
+                    font-size: 14px;
+                    line-height: 150%;
+                    opacity: 0.3;
+                }
+                .declaration__list_item_text_large {
+                    padding-left: 30px;
+                    max-width: 319px;
+                    max-height: 84px;
+                    font-size: 24px;
+                    line-height: 150%;
+                    opacity: 1;
+                }
+
+            }
+            
+        }
+    }
+    .declaration__image {
+        position: absolute;
+        top: 86px;
+        right: 21px;
+        max-width: 306px;
+        max-height: 400px;
+        z-index: 1;
     }
 }
 
 // 
-// .topLine__button_right {
-// }
-// .innovation__declaration {
-// }
-// .declaration__list {
-// }
-// .declaration__list_item {
-// }
-// .declaration__list_number {
-// }
-// .declaration__list_item_text {
-// }
 // .ideclaration__list_item {
 // }
 // .declaration__list_number_large {
