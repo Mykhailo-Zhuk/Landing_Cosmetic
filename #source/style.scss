@@ -38,130 +38,96 @@ body, html {
     }
     background-color: $color_1;
     .top-line__body {
-    @include topBorder;
-    max-height: 90px;
+        max-height: 90px;
     }
     .top-line__body_list {
-    display: flex;
-    justify-content: space-between;
+        display: flex;
+        justify-content: stretch;
+        // justify-content: flex-start;
     }
     .top-line__items {
-        flex: 0 1 20%;
+        @include topBorder;
+        flex: 0 1 21%;
         display: flex;
         align-items: center;
-        margin-left: 10px;
-    }
-    .top-line__social_list {
-        display: flex;
-        align-items: center;
-        .social-icon__item  {
-            flex: 0 1 25%;
-            margin-left: 10px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        height: 90px;
+        &:last-child {
+            padding: 0;
         }
     }
-    
-}
-//     
-//         display: flex;
-//         
-//         justify-content: center;
-//         
-//     }
-//     .top-line__items_logo {   
-//                 text-align: center;  
-//                 padding: 0 20px;
-//                 img {
-//                     min-width: 40px;
-//                     height: 100%;
-//                     width: 100%;
-//                     object-fit: contain;
-//                 }
-//     } 
-    
-//     .top-line__items_text {
-//             @include topBorder; 
-//             flex: 0 1 190px;
-//             font-size: 14px;
-//             line-height: 19px;
-//             text-align: center;
-//             padding: 18px 10px;                
-//     }
-//     .top-line__saloons {
-//         display: flex;
-//         justify-content: center;
-//         @include topBorder;
-//         max-width: 320px;
-//         position: relative;
-//         padding: 24px 20px 22px 30px;
-//         .top-line__saloons_text {
-//             font-size: 14px;
-//             line-height: 18.83px;
-//         }
-//         &:after {
-//             content: "";
-//             position: absolute;
-//             top: 33px;
-//             right: 25px;
-//             background-color: $color_3;
-//             height: 20px;
-//             width: 20px;
-//             border-radius: 50%;
-//             z-index: 1;
-//         }
-//         .top-line__saloons_image {
-//             position: absolute;
-//             top: 34px;
-//             right: 31px;
-//             z-index: 2;
-//         }
-//         }
-//         .top-line__button {
-//             @include topBorder;
-//             flex: 0 1 331px;
-//             align-items: center;
-//             padding: 25px 5px;
-        
-//             .top-line__button_item {
-//                 display: flex;
-//                 flex-direction: row-reverse;
-//                 justify-content: space-between;
-//                 background-color: $color_4;
-//                 width: 270px;
-//                 height: 40px;
-//                 color: $color_1;
-//                 p {
-//                     margin: 13px 20px 12px 0;
-//                     line-height: 16.48px;
-//                     font-size: 12px;
-//                     text-transform: uppercase;
-//                 }
-//                 img {
-//                     margin: 10px 5px 12px 15px;
-//                 }
-//             }
-//         }
-//         .top-line__social_list {
-//             margin: 0;
-//             padding: 0;
-//             display: flex;
-//             flex: 0 1 100px;
-//             flex-direction: row;
-//             height: 100%;
-//             li {
-//                 list-style: none;
-//             }
-//         }
-//         .social-icon__item {
-//             max-width: 80px;
-//             @include topBorder;
-//             &:last-child {
-//                 border-right: 1px solid $color_2;
-//             }
-//             img {
-//                 margin: 35px 30px;
-//             }
-//         }
-// }
+    .top-line__items_logo {
+        max-width: 240px;
+    }
+    .top-line__items_text {
+        font-size: 16px;
+        line-height: 19px;
+        flex: 0 0 200px;
+    }
+    .top-line__items_sallons {
+        flex: 0 0 210px;
+        padding: 0;
+    }
+    .top-line__subItems {
+        display: flex;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            right: -5px;
+            background-color: $color_3;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    }
+    .top-line__saloons {
+        display: flex;
+        padding: 0 0 0 25px;
+        align-items: center;
+        img {
+            height: 8px;
+            width: 8px;
+            z-index: 2;
+        }
+    }
+    .top-line__items_button {
+        max-width: 400px;
+    }
+    .top-line__button {
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row-reverse;
+        height: 40px;
+        width: 270px;
+        background-color: $color_4;
+        padding: 0 15px;
+        .top-line__button_text {
+            padding-bottom: 3px;
+            color: $color_1;
+        }
+    }
+    .top-line__items_icons {
+        max-width: 400px;
+    }
+    .top-line__social_list {
+        height: 100%;
+        display: flex;
+        flex-basis: 80px;
+        .social-icon__item  {
+            height: 100%;
+            flex: 0 0 75px;
+            border-right: 1px solid $color_2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    } 
+}           
 .first-screen {
     display: flex;
     flex-direction: column;
