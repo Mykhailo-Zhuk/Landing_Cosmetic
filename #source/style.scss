@@ -874,6 +874,30 @@ html {
       background-color: $color_4;
     }
   }
+  .top-line__headerBurger.active {
+    &::before {
+      position: absolute;
+      content: '';
+      background-color: rgba(255, 255, 255, 0.8);
+      height: 300px;
+      top: -10;
+      right: -7px;
+      width: 1200px;
+      z-index: 4;
+    }
+    span {
+      transform: rotate(45deg);
+      top: 20px;
+      right: 3px;
+      z-index: 4;
+    }
+    &:after {
+      transform: rotate(-45deg);
+      top: 20px;
+      right: 3px;
+      z-index: 4;
+    }
+  }
   .top-line {
     max-height: 70px;
     height: 100%;
@@ -881,9 +905,28 @@ html {
   .top-line__logo {
     border: none;
     margin-top: 5px;
+    z-index: 5;
   }
   .top-line__item {
     display: none;
+  }
+  .top-line__item.active {
+    display: flex;
+    z-index: 5;
+  }
+  .top-line__body_list.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    z-index: 5;
+    flex-wrap: no-rap;
+    margin-top: 90px;
+    max-width: 1142px;
+    .top-line__items {
+      flex: 1 1 20%;
+    }
   }
   .first-screen {
     margin-top: 62px;
