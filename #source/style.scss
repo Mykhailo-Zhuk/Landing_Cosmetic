@@ -168,9 +168,9 @@ html {
         text-decoration: none;
       }
     }
-    @media (max-width: 1085px) {
-      display: none;
-    }
+    // @media (max-width: 1085px) {
+    //   display: none;
+    // }
   }
   .navigation__panel_link {
     color: $color_1;
@@ -837,7 +837,7 @@ html {
   }
 }
 // media requests
-@media (max-width: 1295px) {
+@media (max-width: 1280px) {
   .top-line__body {
     position: relative;
   }
@@ -936,10 +936,16 @@ html {
     margin-top: 62px;
   }
 }
-@media (max-width: 1085px) {
-  // .navigation__panel_menu {
-  //   display: none;
-  // }
+@media (max-width: 1100px) {
+  .first-screen .navigation__panel_link {
+    font-size: 14px;
+  }
+  .first-screen .navigation__panel_button-link {
+    font-size: 14px;
+  }
+  .first-screen .navigation__panel_list {
+    display: none;
+  }
   .top-line__headerBurger.active {
     &::before {
       height: 300px;
@@ -960,7 +966,7 @@ html {
   .first-screen__menu {
     height: 60px;
   }
-  .navigation__panel_button {
+  .first-screen .navigation__panel_button {
     position: absolute;
     top: 80px;
     right: 20px;
@@ -973,8 +979,8 @@ html {
     span {
       position: absolute;
       content: ' ';
-      top: 15px;
-      right: 20px;
+      top: 0px;
+      right: 155px;
       height: 40px;
       width: 30px;
     }
@@ -984,7 +990,7 @@ html {
       width: 20px;
       background-color: #ffffff;
       position: absolute;
-      top: 22px;
+      top: 12px;
       right: 160px;
       transform: rotate(-45deg);
     }
@@ -994,13 +1000,47 @@ html {
       width: 20px;
       background-color: #ffffff;
       position: absolute;
-      top: 34px;
+      top: 24px;
       right: 160px;
       transform: rotate(45deg);
     }
   }
+  .navigation__panel_list.active {
+    display: block;
+    position: absolute;
+    width: 220px;
+    top: 64px;
+    right: 205px;
+    transition: all 0.5s ease 0s;
+    padding-inline-start: 0;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.8);
+    .navigation__panel_link {
+      color: $color_5;
+    }
+  }
 }
-@media (max-width: 660px) {
+@media (max-width: 850px) {
+  .first-screen {
+    max-height: 1100px;
+  }
+  .first-screen__body {
+    display: flex;
+    flex-direction: column;
+    .first-screen__discription {
+      margin: 0;
+    }
+  }
+  .first-screen .first-screen__slider .first-screen__slider_image {
+    max-width: 400px;
+    max-height: 300px;
+    min-height: 200px;
+    min-width: 200px;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+}
+@media (max-width: 767px) {
   .top-line__headerBurger.active {
     &::before {
       height: 1000px;

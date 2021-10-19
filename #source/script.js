@@ -4,3 +4,8 @@ $(this.document).ready(function() {
         $('body').toggleClass('lock');
     });
 }); 
+$(this.document).ready(function() {
+    $('.navigation__panel_listButton').click(function(event) {
+        $('.navigation__panel_list').toggleClass('active');
+    });
+}); 
