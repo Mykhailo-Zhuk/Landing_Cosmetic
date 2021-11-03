@@ -468,7 +468,7 @@ html {
 .innovations .innovation__items_left .innovation__items_header {
   font-size: 30px;
   line-height: 45px;
-  margin: 30px 0 0 40px;
+  margin: 30px 40px 0 40px;
 }
 .innovations .innovation__items_left .innovation__downLine_body {
   margin: 25px 0 0 40px;
@@ -538,6 +538,7 @@ html {
      object-position: 0px -65px;
 }
 .innovations .innovation__items_right {
+  margin-left: 20px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 636px;
           flex: 0 1 636px;
@@ -1232,6 +1233,7 @@ html {
 @media (max-width: 850px) {
   .first-screen {
     max-height: 1100px;
+    height: 880px;
   }
 
   .first-screen__body {
@@ -1276,8 +1278,33 @@ html {
     position: absolute;
     left: 8px;
   }
+
+  .first-screen .first-screen__footer .footer__panel {
+    display: block;
+  }
+
+  .innovations .innovation__items_right .innovation__declaration .declaration__list .declaration__list_item_text_large {
+    font-size: 16px;
+  }
+
+  .innovations .innovation__items_right .innovation__declaration .declaration__list .declaration__list_number_large {
+    font-size: 64px;
+  }
+
+  .innovations .innovation__items_left .innovation__items_header {
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  .innovations .innovation__items_left {
+    max-height: 515px;
+  }
 }
 @media (max-width: 767px) {
+  .innovations {
+    margin-top: 0;
+  }
+
   .top-line__headerBurger.active::before {
     height: 1000px;
     width: 700px;
@@ -1309,12 +1336,12 @@ html {
     overflow: hidden;
   }
 
-  .first-screen .first-screen__footer .footer__panel {
+  .innovations .innovations__row {
     display: block;
-    cursor: pointer;
   }
 
-  .first-screen {
-    height: 890px;
+  .innovations .innovation__items_left .innovation__downImage {
+    max-width: 620px;
+    margin: 40px 40px 0 40px;
   }
 }
